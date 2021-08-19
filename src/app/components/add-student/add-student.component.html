@@ -1,0 +1,13 @@
+<form *ngIf="showAddStudent"  class="form-control" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Student name</label>
+    <input type="text" name="name" id="name" placeholder="Student name" [(ngModel)]="name"/>
+  </div>
+
+  <div>
+    <label for="department">Student name</label>
+    <input type="text" name="department" id="department" placeholder="Student department" [(ngModel)]="department"/>
+  </div>
+
+  <input type="submit" value="Add student" class="btn btn-block">
+</form>

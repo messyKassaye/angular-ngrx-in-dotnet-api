@@ -1,0 +1,9 @@
+<div>
+  <app-header
+    color="{{showAddStudent?'red':'black'}}"
+    text="{{showAddStudent?'Close form':'Add student'}}"
+    (btnClicked)="onBtnClick()"></app-header>
+  <app-add-student></app-add-student>
+  <app-tutorial-item *ngFor="let student of students$ |async" [student]="student"></app-tutorial-item>
+  <router-outlet></router-outlet>
+</div>
