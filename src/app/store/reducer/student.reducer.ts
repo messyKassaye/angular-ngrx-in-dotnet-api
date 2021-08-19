@@ -13,6 +13,8 @@ export function reducer(state:StudentState=initialState,action:StudentAction.Act
     case ADD_STUDENT:
       return {
         ...state,
+        students:state.students.push(action.payload),
+        loading:false
       }
 
       case STUDENT_FETCH_SUCCESS:
